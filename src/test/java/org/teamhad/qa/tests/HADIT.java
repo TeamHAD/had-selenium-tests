@@ -36,10 +36,10 @@ public class HADIT extends DriverFactory {
 
     private void goToDashboardIfNeeded() throws Exception {
         if (driver.getCurrentUrl().contains(dashboardURL) && driver.getTitle() == expectedPageTitle) {
-            logger.info("Dashboard already loaded.");
+            //logger.info("Dashboard already loaded.");
         } else {
             driver.get(dashboardURL);
-            logger.info("Dashboard not found. Loading new dashboard.");
+            //logger.info("Dashboard not found. Loading new dashboard.");
         }
     }
 
@@ -53,10 +53,10 @@ public class HADIT extends DriverFactory {
 
     private WebDriver createDriverIfNeeded(WebDriver driver) throws Exception {
         if (driver == null || driver.getWindowHandle() == null || driver.getWindowHandle() == "") {
-            logger.info("No driver found. Getting new driver.");
+            //logger.info("No driver found. Getting new driver.");
             return getDriver();
         } else {
-            logger.info("Driver found. Using old driver.");
+            //logger.info("Driver found. Using old driver.");
             return driver;
         }
     }
