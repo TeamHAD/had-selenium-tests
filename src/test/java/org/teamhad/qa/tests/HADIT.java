@@ -11,7 +11,7 @@ import org.testng.annotations.*;
 @Listeners({TestNGMethodRenamer.class})
 public class HADIT extends DriverFactory {
 
-    private String dashboardURL = "localhost:8080";
+    private String dashboardURL = "localhost:8080/userHome.html";
     private String expectedPageTitle = "Home Automation Dashboard";
 
     private static final Logger logger = LoggerFactory.getLogger(HADIT.class);
